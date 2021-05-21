@@ -1,6 +1,8 @@
 import AnimeNumbers from './anime-numbers.js';
 
-export default function initFetchAnimals() {
+export default function fetchAnimals(url, target) {
+  const numbersGrid = document.querySelector(target);
+
   function createAnimal(animal) {
     const div = document.createElement('div');
     div.classList.add('number-animal');
@@ -9,24 +11,28 @@ export default function initFetchAnimals() {
     return div;
   }
 
-  async function fetchAnimals(url) {
+  function fillAnimals(animal) {
+    const divAnimal = createAnimal(animal);
+    numbersGrid.appendChild(divAnimal);
+  }
+
+  function animeAnimalsNumber() {
+    const animeNumbers = new AnimeNumbers('[data-number]', '.numbers', 'active');
+    animeNumbers.init();
+  }
+
+  async function createAnimals() {
     try {
       const animalsResponse = await fetch(url);
       const animalsJSON = await animalsResponse.json();
-      const numbersGrid = document.querySelector('.numbers-grid');
-
-      animalsJSON.forEach(animal => {
-        const divAnimal = createAnimal(animal);
-        numbersGrid.appendChild(divAnimal);
-      });
-      const animeNumbers = new AnimeNumbers('[data-number]', '.numbers', 'active');
-      animeNumbers.init();
+      animalsJSON.forEach(animal => fillAnimals(animal));
+      animeAnimalsNumber();
     } catch (erro) {
       console.log(erro);
     }
   }
 
-  fetchAnimals('./animalsapi.json');
+  return createAnimals();
 
 }
 
