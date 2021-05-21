@@ -8,7 +8,7 @@ import initMenuMobile from './modules/menu-mobile.js'
 import initOpeningHours from './modules/opening-hours.js'
 import fetchAnimals from './modules/fetch-animals.js'
 import fetchBitcoin from './modules/fetch-bitcoin.js'
-import initAnimeScroll from './modules/init-animation.js'
+import AnimeScroll from './modules/anime-scroll.js'
 
 const smoothScroll = new SmoothScroll('[data-menu="suave"] a[href^="#"]');
 smoothScroll.init();
@@ -29,4 +29,5 @@ initMenuMobile();
 initOpeningHours();
 fetchAnimals('../../animalsapi.json', '.numbers-grid');
 fetchBitcoin('https://www.blockchain.com/ticker', '.btc-price');
-initAnimeScroll();
+const animeScroll = new AnimeScroll('[data-anime = "scroll"]');
+animeScroll.init();
