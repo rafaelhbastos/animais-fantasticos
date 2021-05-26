@@ -5,7 +5,7 @@ import Modal from './modules/modal.js'
 import ToolTip from './modules/tooltip.js'
 import DropDownMenu from './modules/dropdown-menu.js'
 import MenuMobile from './modules/menu-mobile.js'
-import initOpeningHours from './modules/opening-hours.js'
+import OpeningHours from './modules/opening-hours.js'
 import fetchAnimals from './modules/fetch-animals.js'
 import fetchBitcoin from './modules/fetch-bitcoin.js'
 import AnimeScroll from './modules/anime-scroll.js'
@@ -31,7 +31,8 @@ dropdownMenu.init();
 const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
 menuMobile.init();
 
-initOpeningHours();
+const openingHours = new OpeningHours('[data-week]', 'open');
+openingHours.init();
 
 const animeScroll = new AnimeScroll('[data-anime = "scroll"]');
 animeScroll.init();
