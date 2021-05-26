@@ -3,7 +3,7 @@ import Accordion from './modules/accordion.js'
 import TabNav from './modules/tabnav.js'
 import Modal from './modules/modal.js'
 import ToolTip from './modules/tooltip.js'
-import initDropDownMenu from './modules/dropdown-menu.js'
+import DropDownMenu from './modules/dropdown-menu.js'
 import initMenuMobile from './modules/menu-mobile.js'
 import initOpeningHours from './modules/opening-hours.js'
 import fetchAnimals from './modules/fetch-animals.js'
@@ -24,7 +24,10 @@ modal.init();
 
 const toolTip = new ToolTip('[data-tooltip]');
 toolTip.init();
-initDropDownMenu();
+
+const dropdownMenu = new DropDownMenu('[data-dropdown]');
+dropdownMenu.init();
+
 initMenuMobile();
 initOpeningHours();
 
