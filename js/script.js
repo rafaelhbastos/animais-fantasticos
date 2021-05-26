@@ -37,5 +37,5 @@ openingHours.init();
 const animeScroll = new AnimeScroll('[data-anime = "scroll"]');
 animeScroll.init();
 
-fetchAnimals('../../animalsapi.json', '.numbers-grid');
+fetchAnimals('./animalsapi.json', '.numbers-grid');
 fetchBitcoin('https://www.blockchain.com/ticker', '.btc-price');
