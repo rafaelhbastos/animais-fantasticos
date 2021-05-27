@@ -201,6 +201,10 @@ body {
   margin: 0 20px;
 }
 
+.slide {
+  transform: translate3d(0px, 0px, 0px);
+}
+
 
 .map {
   grid-column: 2;
