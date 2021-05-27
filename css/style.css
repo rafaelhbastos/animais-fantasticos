@@ -181,6 +181,27 @@ body {
   margin-left: 30px;
 }
 
+.gallery {
+  grid-column: 1 / -1;
+}
+
+.slide-wrapper {
+  overflow: hidden;
+  grid-column: 1 / -1;
+}
+
+.slide {
+  display: flex;
+}
+
+.slide li {
+  flex-shrink: 0;
+  width: 800vw;
+  max-width: 800px;
+  margin: 0 20px;
+}
+
+
 .map {
   grid-column: 2;
 }
