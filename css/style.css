@@ -196,7 +196,7 @@ body {
 
 .slide li {
   flex-shrink: 0;
-  width: 800vw;
+  width: 80vw;
   max-width: 800px;
   margin: 0 20px;
 }
