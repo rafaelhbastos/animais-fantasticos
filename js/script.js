@@ -9,7 +9,7 @@ import OpeningHours from './modules/opening-hours.js'
 import fetchAnimals from './modules/fetch-animals.js'
 import fetchBitcoin from './modules/fetch-bitcoin.js'
 import AnimeScroll from './modules/anime-scroll.js'
-import Slide from './modules/slide'
+import SlideNav from './modules/slide.js'
 
 const smoothScroll = new SmoothScroll('[data-menu="suave"] a[href^="#"]');
 smoothScroll.init();
@@ -38,9 +38,9 @@ openingHours.init();
 const animeScroll = new AnimeScroll('[data-anime = "scroll"]');
 animeScroll.init();
 
-const slide = new Slide('.slide', '.slide-wrapper');
+const slide = new SlideNav('.slide', '.slide-wrapper');
 slide.init();
-slide.changeSlide(4);
+slide.addArrow('.prev', '.next');
 
 fetchAnimals('./animalsapi.json', '.numbers-grid');
 fetchBitcoin('https://www.blockchain.com/ticker', '.btc-price');

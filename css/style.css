@@ -194,7 +194,7 @@ body {
   display: flex;
 }
 
-slide:hover {
+.slide:hover {
   will-change: transform;
 }
 
@@ -216,6 +216,17 @@ slide:hover {
   transform: scale(1);
 }
 
+.arrow-nav {
+  overflow: hidden;
+  grid-column: 1 / -1;
+  margin: 10px auto;
+}
+
+.arrow-nav button {
+  background: #e54;
+  border: 4px solide #000;
+  border-radius: 4px;
+}
 
 .map {
   grid-column: 2;
