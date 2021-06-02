@@ -238,22 +238,52 @@ body {
   background: #e54;
 }
 
+.custom-controls {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.custom-controls li {
+  opacity: .8;
+  transform: scale(.8);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 2px;
+  box-shadow: 0 2px 2px rgba(0,0,0,.5);
+  transition: .3s;
+  cursor: pointer;
+}
+
+.custom-controls li.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
 .arrow-nav {
   grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-around;
   margin: 10px auto;
 }
 
 .arrow-nav button {
-  background: #e54;
-  border: 2px solid #000;
+  cursor: pointer;
+  background: #fb5;
+  border: none;
   border-radius: 4px;
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
 }
 
 .arrow-nav button:hover {
-  background: #000;
-  border: 2px solid #000;
-  color: #e54;
-  border-radius: 4px;
+  background: #e54;
 }
 
 .map {
