@@ -41,6 +41,7 @@ animeScroll.init();
 const slide = new SlideNav('.slide', '.slide-wrapper');
 slide.init();
 slide.addArrow('.prev', '.next');
+slide.addControl();
 
 fetchAnimals('./animalsapi.json', '.numbers-grid');
 fetchBitcoin('https://www.blockchain.com/ticker', '.btc-price');
